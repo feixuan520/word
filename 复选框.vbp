@@ -1,0 +1,63 @@
+Private Sub Command1_Click()
+Dim n%
+n = Val(Text1.Text)
+
+If n > 0 - 1 And n < 60 + 1 Then
+    MsgBox "0-60"
+End If
+If n > 61 - 1 And n < 80 + 1 Then
+    MsgBox "61-80"
+End If
+If n > 81 - 1 And n < 100 + 1 Then
+    MsgBox "81-100"
+End If
+End Sub
+
+Private Sub Command2_Click()
+Dim n%
+n = Val(Text1.Text)
+
+If n > 0 - 1 And n < 60 + 1 Then
+    MsgBox "0-60"
+ElseIf n > 61 - 1 And n < 80 + 1 Then
+    MsgBox "61-80"
+ElseIf n > 81 - 1 And n < 100 + 1 Then
+    MsgBox "81-100"
+End If
+
+End Sub
+
+Private Sub Command3_Click()
+Dim n%
+n = Val(Text1.Text)
+Select Case n
+    Case Is < 10
+        MsgBox "<10"
+    Case 70
+        MsgBox "70"
+    Case 80
+        MsgBox "80"
+    Case 90, 100
+        MsgBox "90,100"
+    Case 120 To 150
+        MsgBox "120-150"
+    Case Else
+        MsgBox "其他"
+End Select
+End Sub
+
+Private Sub Command4_Click()
+Dim txt$
+txt = Text1.Text
+Select Case txt
+    Case "a" To "z"
+        MsgBox "a-z"
+    Case "A" To "Z"
+        MsgBox "A-Z"
+    Case "0" To "9"
+        MsgBox "0-9"
+    Case Else
+        MsgBox "其他"
+End Select
+End Sub
+
